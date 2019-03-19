@@ -1,11 +1,16 @@
 import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import { Normalize } from 'styled-normalize'
-import App from './App.jsx';
+import GlobalStyle from './GlobalStyle';
+import { ParallaxProvider } from 'react-scroll-parallax';
+import App from './App';
 
 const Root = () => (
   <Fragment>
-    <App />
+
+    <GlobalStyle />
+    <ParallaxProvider>
+      <App />
+    </ParallaxProvider>
   </Fragment>
 );
 
