@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
+import { Normalize } from 'styled-normalize'
+import App from './App.jsx';
 
-const Index = () => {
-  return <div>Thunder yay</div>
-};
+const Root = () => (
+  <Fragment>
+    <App />
+  </Fragment>
+);
 
-ReactDOM.render(<Index />, document.getElementById('thunderApp'));
+ReactDOM.render(<Root />, document.getElementById('thunderApp'));
