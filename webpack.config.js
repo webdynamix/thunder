@@ -8,7 +8,6 @@ const htmlPlugin = new HtmlWebPackPlugin({
   filename: "./index.html"
 });
 
-
 module.exports = {
   module: {
     rules: [
@@ -18,7 +17,18 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
-      }
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+         use: [
+           {
+             loader: 'file-loader',
+             options: {
+               outputPath: 'appImages'
+             }
+           }
+         ]
+      },
     ]
   },
   resolve: {
@@ -26,7 +36,14 @@ module.exports = {
     // modules: [PATHS.app, PATHS.module
     alias: {
       components: path.resolve(__dirname,  'src/components/'),
+      pages: path.resolve(__dirname,  'src/pages/'),
     }
   },
-  plugins: [htmlPlugin]
+
+  plugins: [htmlPlugin],
+
+  devServer: {
+    contentBase: path.join(__dirname, 'public'),
+    historyApiFallback: true // this prevents the default browser full page refresh on form submission and link change
+  }
 };

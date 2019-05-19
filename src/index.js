@@ -6,7 +6,6 @@ import App from './App';
 
 const Root = () => (
   <Fragment>
-
     <GlobalStyle />
     <ParallaxProvider>
       <App />

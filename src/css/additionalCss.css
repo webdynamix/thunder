@@ -1,0 +1,31 @@
+.storefront-primary-navigation  a {
+	background: rgba(255, 255, 255, 0.9);
+	font-size: 18px;
+    font-weight: 700;
+	padding-left: 16px !important;
+}
+
+@media (min-width: 768px) {
+.storefront-primary-navigation {
+	background: rgba(255, 255, 255, 0.9);
+
+}
+
+.storefront-primary-navigation a {
+	background: transparent;
+	padding-left: 0 !important;
+}
+
+.nav-menu li>a, .menu .cart-contents {
+	padding-top: 16px !important;
+	padding-bottom: 16px !important;
+}
+
+.site-branding {
+	float: right !important;
+}
+
+}
+.site-search {
+	display: none;
+}
